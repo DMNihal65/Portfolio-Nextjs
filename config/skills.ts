@@ -32,11 +32,18 @@ import {
   SiUnity,
   SiMicrosoft,
   SiElectron,
+  SiFirebase,
+  SiApachekafka,
+  SiAmazonaws,
+  
+  
 } from 'react-icons/si'
+import { BiLogoTailwindCss } from "react-icons/bi";
 import { BsQuestionSquare } from 'react-icons/bs'
 import { AiOutlineAntDesign } from 'react-icons/ai'
 import { FaSourcetree } from 'react-icons/fa'
 import { IoLogoPwa } from 'react-icons/io5'
+import fastapi from '../public/fastapi.svg'
 
 export type SkillCategory =
   | 'backend'
@@ -58,10 +65,7 @@ export const Skills: {
   [key in SkillCategory]: Skill[]
 } = {
   backend: [
-    {
-      name: 'C# - .NET.Core',
-      icon: SiDotNet,
-    },
+    
     {
       name: 'Node',
       icon: SiNodeDotJs,
@@ -75,26 +79,19 @@ export const Skills: {
       icon: SiTypescript,
     },
     {
-      name: 'Graphql (JS, C#)',
+      name: 'Graphql (JS)',
       icon: SiGraphql,
     },
-    {
-      name: 'PHP (Wordpress, Slim)',
-      icon: SiPhp,
-    },
+    
   ],
   frontend: [
     {
-      name: 'React, RecoilJS',
+      name: 'React',
       icon: SiReact,
     },
     {
       name: 'NextJS',
       icon: SiNextDotJs,
-    },
-    {
-      name: 'Apollo Graphql',
-      icon: SiApollographql,
     },
     {
       name: 'Redux',
@@ -104,10 +101,6 @@ export const Skills: {
       name: 'VueJS',
       icon: SiVueDotJs,
     },
-    {
-      name: 'Ghost',
-      icon: SiGhost,
-    },
   ],
   database: [
     {
@@ -115,8 +108,8 @@ export const Skills: {
       icon: SiPostgresql,
     },
     {
-      name: 'MsSQL',
-      icon: SiMicrosoftsqlserver,
+      name: 'Firebase',
+      icon: SiFirebase,
     },
     {
       name: 'MySQL',
@@ -127,17 +120,10 @@ export const Skills: {
       icon: SiMongodb,
     },
     {
-      name: 'Redis',
-      icon: SiRedis,
+      name: 'Apachekafka',
+      icon: SiApachekafka,
     },
-    {
-      name: 'SocketIO',
-      icon: SiSocketDotIo,
-    },
-    {
-      name: 'Google Pubsub',
-      icon: SiGooglecloud,
-    },
+    
   ],
   cicd: [
     {
@@ -145,25 +131,15 @@ export const Skills: {
       icon: SiDocker,
     },
     {
-      name: 'GCP',
-      icon: SiGooglecloud,
+      name: 'AWS',
+      icon: SiAmazonaws,
     },
-    {
-      name: 'CPanel',
-      icon: SiCpanel,
-    },
-    {
-      name: 'Rancher',
-      icon: SiRancher,
-    },
+    
     {
       name: 'GitlabCICD',
       icon: SiGitlab,
     },
-    {
-      name: 'Buildkite',
-      icon: BsQuestionSquare,
-    },
+   
   ],
   'ui frameworks': [
     {
@@ -183,8 +159,8 @@ export const Skills: {
       icon: SiFramer,
     },
     {
-      name: 'ChakraUI',
-      icon: BsQuestionSquare,
+      name: 'Tailwind Css',
+      icon: BiLogoTailwindCss,
     },
   ],
   'productivity boost': [
@@ -210,17 +186,8 @@ export const Skills: {
       name: 'React Native',
       icon: SiReact,
     },
-    {
-      name: 'Web PWA',
-      icon: IoLogoPwa,
-    },
   ],
-  games: [
-    {
-      name: 'Unity3D',
-      icon: SiUnity,
-    },
-  ],
+  
   desktop: [
     {
       name: 'Windows Forms, WPF',

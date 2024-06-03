@@ -17,11 +17,11 @@ const Logo = () => {
         {colorMode === ThemeMode.Dark ? (
           <MotionImage
             className={!isMobile ? styles.logo : ''}
-            boxSize={isMobile ? '30px' : '50px'}
-            objectFit="cover"
-            src="./logo.png"
-            alt="KL Lawingco Logo"
-            fallbackSrc="./logo.png"
+            boxSize={isMobile ? '30px' : '100px'}
+            objectFit="contain"
+            src="./DMN_Color.png"
+            alt="DM Nihal Logo"
+            fallbackSrc="./DMN_Color.png"
             variants={simpleOpacity}
             initial="initial"
             animate={isLogoLoaded && 'animate'}
@@ -31,11 +31,11 @@ const Logo = () => {
         ) : (
           <MotionImage
             className={!isMobile ? styles.logo : ''}
-            boxSize={isMobile ? '30px' : '50px'}
-            objectFit="cover"
-            src="./logo_light.png"
-            fallbackSrc="./logo_light.png"
-            alt="KL Lawingco Logo"
+            boxSize={isMobile ? '30px' : '100px'}
+            objectFit="contain"
+            src="./DMN_Color.png"
+            fallbackSrc="./DMN_Color.png"
+            alt="DM Nihal Logo"
             variants={simpleOpacity}
             initial="initial"
             animate={isLogoLoaded && 'animate'}

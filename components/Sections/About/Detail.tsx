@@ -21,6 +21,10 @@ import {
   SiNextDotJs,
   SiNodeDotJs,
   SiDocker,
+  SiPython,
+  SiVueDotJs,
+  SiPostgresql,
+  SiMongodb
 } from 'react-icons/si'
 import { GiCoffeePot } from 'react-icons/gi'
 import { IoMdOpen } from 'react-icons/io'
@@ -32,7 +36,7 @@ type ISkillSetModal = {
 const Detail = ({ onOpen }: ISkillSetModal) => {
   const emphasis = useColorModeValue('teal.500', 'cyan.200')
   const currentYear = new Date().getFullYear()
-  const professionalYears = currentYear - 2016
+  const professionalYears = currentYear - 2023
 
   return (
     <Stack
@@ -46,24 +50,25 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         letterSpacing={1.8}
         style={{
           fontVariantCaps: 'small-caps',
+          // fontFamily: "'Roboto', sans-serif", // Ensure the custom font is applied
         }}
       >
-        What i do.
+        What I Do
       </Heading>
       <Text variant="description">
-        I`ve been coding professionally for {professionalYears} years now and
-        currently working as a <b>Software Engineer</b> that focuses on{' '}
-        <b>architecture</b>, <b>APIs</b>,{' '}
+        I've been coding professionally for  {professionalYears}+ years now and
+        currently working as a <b>Software Engineer</b>  focusing on {' '}
+        <b>full-stack web development</b>,{' '}integrating the power of,{' '}
         <Tooltip
-          label="Ha!. Or more accurately TECH DEBT"
+          label="Ha!. Or more accurately OpenSource LLAMA"
           aria-label="Tech Debt?"
           hasArrow
         >
           <Text as="span" variant="emphasis">
-            <b>nitty-gritty business logics</b>
+            <b>AI</b>
           </Text>
         </Tooltip>{' '}
-        and even <b>front end integration</b> stuff now, how time flies!
+        into websites,  <b>and diving deep into system design. </b> how time flies!
         <br /> <br />
         Here are few technologies that are cup of my{' '}
         <Tooltip
@@ -81,27 +86,27 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
       <SimpleGrid columns={2} spacing={4}>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiDotNet} color={emphasis} fontSize="2em" />
-            C# - .NET.Core
+            <ListIcon as={SiPython} color={emphasis} fontSize="2em" />
+            Python
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiJavascript} color={emphasis} fontSize="2em" />
             Javascript (ES6+)
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiTypescript} color={emphasis} fontSize="2em" />
-            Typescript
+            <ListIcon as={SiPostgresql} color={emphasis} fontSize="2em" />
+            Postgre Sql
           </ListItem>
 
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNodeDotJs} color={emphasis} fontSize="2em" />
-            Node
+            <ListIcon as={SiMongodb} color={emphasis} fontSize="2em" />
+            Mongo DB
           </ListItem>
         </List>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiGraphql} color={emphasis} fontSize="2em" />
-            Graphql
+            <ListIcon as={SiVueDotJs} color={emphasis} fontSize="2em" />
+            Vue Js
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiReact} color={emphasis} fontSize="2em" />

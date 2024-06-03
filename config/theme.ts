@@ -62,6 +62,8 @@ const theme = extendTheme({
   config,
   fonts: {
     body: 'Poppins',
+    // heading: "'Roboto', sans-serif",
+    heading: "'Space Grotesk', sans-serif"
   },
   colors,
   styles,

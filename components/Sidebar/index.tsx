@@ -70,7 +70,7 @@ const Sidebar = () => {
             textTransform="uppercase"
             variants={fadeInUp}
           >
-            Marc Jhon
+            DM
           </MotionHeading>
           <MotionHeading
             as="h2"
@@ -82,7 +82,7 @@ const Sidebar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Lawingco.
+            Nihal.
           </MotionHeading>
           <MotionText
             colorScheme="gray"
@@ -90,7 +90,7 @@ const Sidebar = () => {
             className={styles.marginTopForce}
             variants={fadeInUp}
           >
-            Or you could call me KL. That works too . . .
+            Or you could call me Ni. That works too . . .
           </MotionText>
 
           <MotionHeading
@@ -115,17 +115,16 @@ const Sidebar = () => {
               {' '}
               Thank you!
             </Text>
-            <br />I am software engineer that specializes at backend apis, front
-            end integration, recently found myself studying UX too.
+            <br />I'm a Full Stack Developer with a flair for AI and a passion for entrepreneurship. My portfolio showcases the blend of creativity and technology I bring to the table. Let's connect and explore the limitless possibilities of the digital world!
           </MotionText>
           <MotionButton
             size="lg"
             variant="outline"
             borderWidth="1px"
-            borderRadius="0"
+            borderRadius="8"
             fontWeight="normal"
             fontSize="sm"
-            width="120px"
+            width="140px"
             variants={simpleOpacity}
             as={'a'}
             href="mailto:marcjhon18@gmail.com"
@@ -133,7 +132,7 @@ const Sidebar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Get in touch!
+            See my Journey!
           </MotionButton>
 
           <MotionBox d="flex" variants={simpleOpacity}>
