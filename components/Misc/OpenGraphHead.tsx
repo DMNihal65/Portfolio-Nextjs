@@ -1,9 +1,9 @@
 import Head from 'next/head'
 const OpenGraphHead = () => (
   <Head>
-    <title>KL Lawingco | Software Engineer</title>
+    <title>DM Nihal | Software Engineer</title>
     <meta name="description" content="My personal solace place on web-earth." />
-    <meta property="og:title" content="KL Lawingco | Software Engineer" />
+    <meta property="og:title" content="DM Nihal | Software Engineer" />
     <meta property="og:site_name" content="Marc Jhon Lawingco" />
     <meta property="og:url" content="https://kllawingco.netlify.app/" />
     <meta
@@ -13,7 +13,7 @@ const OpenGraphHead = () => (
     <meta property="og:type" content="profile" />
     <meta
       property="og:image"
-      content="https://kllawingco.netlify.app/KL_avatar.png"
+      content="../DMN.png"
     ></meta>
   </Head>
 )

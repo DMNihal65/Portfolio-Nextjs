@@ -19,22 +19,22 @@ type SocialMedia = {
 export const SocialMedias: SocialMedia[] = [
   {
     label: 'Twitter',
-    href: 'https://twitter.com/keysl1831',
+    href: 'https://twitter.com/zodiacvirus/',
     icon: FaTwitter,
   },
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/kllawingco/',
+    href: 'https://www.instagram.com/nihaldm_6565/',
     icon: FaInstagram,
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/marclawingco/',
+    href: 'https://www.linkedin.com/in/dmnihal65/',
     icon: FaLinkedin,
   },
   {
     label: 'Github',
-    href: 'https://github.com/klawingco',
+    href: 'https://github.com/DMNihal65',
     icon: FaGithub,
   },
  

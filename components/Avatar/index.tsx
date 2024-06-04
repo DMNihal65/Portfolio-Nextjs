@@ -11,8 +11,8 @@ import { useEffect } from 'react'
 import { avatarAnimation } from 'config/animations'
 
 const AvatarImages = {
-  DarkMode: '/KL_avatar.png',
-  LightMode: './KL_avatar_light.png',
+  DarkMode: './Me.png',
+  LightMode: './Me.png',
 }
 
 declare global {
@@ -60,12 +60,12 @@ const Avatar = () => {
         <Text textAlign="center" fontSize="smaller" variant="description">
           Art by{' '}
           <Link
-            href="https://twitter.com/kojiro_ai"
+            href=""
             target="_blank"
             aria-label="KojiroArt"
             rel="noreferrer"
           >
-            KojiroArt
+            DM Nihal
           </Link>
         </Text>
       </MotionBox>

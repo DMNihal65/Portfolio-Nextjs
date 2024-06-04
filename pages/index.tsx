@@ -121,7 +121,7 @@ const Portfolio = ({ articles }: { articles: Article[] }): JSX.Element => {
                 <FeaturedWorks />
               </Box>
             </FadeInLayout>
-            <FadeInLayout>
+            {/* <FadeInLayout>
               <Box
                 id="blog"
                 className="contentRow"
@@ -132,7 +132,7 @@ const Portfolio = ({ articles }: { articles: Article[] }): JSX.Element => {
               >
                 <DevToArticles articles={articles} />
               </Box>
-            </FadeInLayout>
+            </FadeInLayout> */}
             <FadeInLayout>
               <Box
                 id="contact"

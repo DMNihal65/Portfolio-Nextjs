@@ -44,12 +44,11 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={1}
-            title="Tobira!"
-            src="/works/tobira/IphoneX-tobira.webp"
-            description="Japanese social media platform for travelers to show off their
-          adventure to the world. I was incharge of Front end integration, made using React, Antd and Styled Components."
+            title="Fintech Bank App!"
+            src="/works/tobira/bankapp.png"
+            description="Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users, and manages their finances altogether."
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://tobira-app-test.netlify.app/"
+            ctaUrl="https://banking-jet.vercel.app/sign-in"
             objectPosition="right 20%"
             isMobile={isMobile}
           />
@@ -58,11 +57,11 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={2}
-            title="RSV"
-            description="RSV is a smart contract (ERC20) powered reservation system. I am incharge of backend using NET.Core 2.1."
-            src="/works/rsv.webp"
+            title="SAAS Automation Builder"
+            description="The SAAS Automation Builder is an innovative platform designed to streamline the creation and management of SaaS applications. Leveraging cutting-edge technologies such as Clerk for seamless authentication, Neon Tech for advanced database solutions, and Uploadcare for efficient file management, it ensures a robust and scalable infrastructure."
+            src="/works/saas1.png"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://solution.rsv.ltd/jp"
+            ctaUrl="https://github.com/webprodigies/fuzzie-production"
             isMobile={isMobile}
           />
         </MotionGridItem>
@@ -70,17 +69,17 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={3}
-            title="Agora School"
-            description="A quizz - reviewer LMS, I made as a freelancer. Backend were powered by PHPSlim and VueJS for Front end."
-            src="/works/agora.webp"
+            title="Notion Clone"
+            description="The SaaS Notion Clone is a sophisticated application that replicates the functionality of Notion with enhanced features. Built with Next.js 13 for a modern front-end experience, it includes real-time cursors for collaborative editing."
+            src="/works/saas2.png"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://dev.agora-school.com"
+            ctaUrl="https://github.com/webprodigies/webprodigies-cypress/tree/main"
             objectPosition="right 20%"
             isMobile={isMobile}
           />
         </MotionGridItem>
 
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+        {/* <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={4}
             title="TMH Layla EC"
@@ -90,7 +89,7 @@ const FeaturedWorksSection = () => {
             ctaUrl="https://www.layla-ec.com/"
             isMobile={isMobile}
           />
-        </MotionGridItem>
+        </MotionGridItem> */}
       </MotionGrid>
     </Stack>
   )

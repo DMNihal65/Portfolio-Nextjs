@@ -1,8 +1,9 @@
-import { memo } from 'react'
-import { Heading, Text, Stack, Link, Icon, Box } from '@chakra-ui/react'
+import { memo, useState } from 'react'
+import { Heading, Text, Stack, Link, Icon, Box, FormControl, FormLabel, Input, Textarea, Button } from '@chakra-ui/react'
 import { motion, Variants } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri'
+
 const rimuruVariant: Variants = {
   shake: {
     rotate: [0, 15, 0, -15, 0],
@@ -26,6 +27,36 @@ const rimuruVariant: Variants = {
 
 const GetInTouch = () => {
   const [ref, inView] = useInView()
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  
+    const formData = { name, email, message };
+  
+    try {
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        console.log('Email sent successfully!');
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        console.error('Error sending email:', response.status);
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  };
+
   return (
     <Stack
       width={{ base: '99%', lg: '60%', xl: '75%' }}
@@ -47,17 +78,18 @@ const GetInTouch = () => {
             ref={ref}
             animate={inView ? ['shake', 'jump'] : false}
           >
-            (⁀ᗢ⁀)
+            (
+              ⁀ᗢ⁀ )
           </motion.div>
         </Text>
       </Heading>
       <Text variant="description">
-        Though, I am fairly introverted myself. I do reply to messages as long
+        I do reply to messages as long
         as my human interaction battery lasts. Coding, work, movies or even weeb
         stuff, anything is cool. So feel free to message me on any of my social
         media or shoot me an{' '}
         <Link
-          href="mailto:marcjhon18@gmail.com"
+          href="Nihaldm:Nihaldm65@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
@@ -65,6 +97,37 @@ const GetInTouch = () => {
         </Link>
         .
       </Text>
+
+      ## Contact Me
+      <FormControl>
+        <FormLabel>Name</FormLabel>
+        <Input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Enter your name"
+        />
+      </FormControl>
+      <FormControl>
+        <FormLabel>Email</FormLabel>
+        <Input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+        />
+      </FormControl>
+      <FormControl>
+        <FormLabel>Message</FormLabel>
+        <Textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Enter your message"
+        />
+      </FormControl>
+      <Button colorScheme="teal" onClick={handleSubmit}>
+        Send Message
+      </Button>
 
       <Box
         spacing={0.5}
@@ -77,14 +140,15 @@ const GetInTouch = () => {
           variant="description"
           textDecoration="none"
           rel="noreferrer"
-          href="https://github.com/klawingco/kl_portfolio"
+          href="https://github.com/DMNihal65"
           target="_blank"
           _focus={{ boxShadow: 'none' }}
         >
           <Text as="span">
             <Icon as={RiGithubFill} h={6} w={6} /> <br />
             Designed and Made with <Icon as={RiHeartPulseFill} /> <br />
-            KL Lawingco <Icon as={RiCopyleftLine} /> 2021
+            DM Nihal <Icon as={RiCopyleftLine} /> 2024<br />
+            <>Inspired from KL Lawingco</>
           </Text>
         </Link>
       </Box>
