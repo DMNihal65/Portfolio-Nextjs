@@ -1,35 +1,31 @@
 import { IconType } from 'react-icons'
 import {
-  SiDotNet,
+
   SiJavascript,
   SiTypescript,
-  SiNodeDotJs,
+  SiNodedotjs,
   SiGraphql,
-  SiApollographql,
-  SiPhp,
+ 
   SiReact,
-  SiNextDotJs,
+  SiNextdotjs,
   SiRedux,
-  SiStyledComponents,
-  SiGhost,
-  SiVueDotJs,
+  SiStyledcomponents,
+ 
+  SiVuedotjs,
   SiDocker,
-  SiGooglecloud,
-  SiCpanel,
-  SiRancher,
+  
   SiGitlab,
   SiPostgresql,
-  SiMicrosoftsqlserver,
+
   SiMysql,
   SiMongodb,
-  SiRedis,
-  SiSocketDotIo,
-  SiMaterialUi,
+ 
+  SiMaterialdesign,
   SiFramer,
   SiGit,
   SiGnubash,
   SiVisualstudiocode,
-  SiUnity,
+  
   SiMicrosoft,
   SiElectron,
   SiFirebase,
@@ -39,11 +35,10 @@ import {
   
 } from 'react-icons/si'
 import { BiLogoTailwindCss } from "react-icons/bi";
-import { BsQuestionSquare } from 'react-icons/bs'
+
 import { AiOutlineAntDesign } from 'react-icons/ai'
 import { FaSourcetree } from 'react-icons/fa'
-import { IoLogoPwa } from 'react-icons/io5'
-import fastapi from '../public/fastapi.svg'
+
 
 export type SkillCategory =
   | 'backend'
@@ -53,7 +48,6 @@ export type SkillCategory =
   | 'ui frameworks'
   | 'productivity boost'
   | 'mobile'
-  | 'games'
   | 'desktop'
 
 export type Skill = {
@@ -68,7 +62,7 @@ export const Skills: {
     
     {
       name: 'Node',
-      icon: SiNodeDotJs,
+      icon: SiNodedotjs,
     },
     {
       name: 'Javascript (ES6+)',
@@ -91,7 +85,7 @@ export const Skills: {
     },
     {
       name: 'NextJS',
-      icon: SiNextDotJs,
+      icon: SiNextdotjs,
     },
     {
       name: 'Redux',
@@ -99,7 +93,7 @@ export const Skills: {
     },
     {
       name: 'VueJS',
-      icon: SiVueDotJs,
+      icon: SiVuedotjs,
     },
   ],
   database: [
@@ -144,7 +138,7 @@ export const Skills: {
   'ui frameworks': [
     {
       name: 'Styled Components',
-      icon: SiStyledComponents,
+      icon: SiStyledcomponents,
     },
     {
       name: 'AntDesign',
@@ -152,7 +146,7 @@ export const Skills: {
     },
     {
       name: 'MaterialUI',
-      icon: SiMaterialUi,
+      icon: SiMaterialdesign,
     },
     {
       name: 'Framer Motion',

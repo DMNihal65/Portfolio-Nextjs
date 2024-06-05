@@ -89,7 +89,7 @@ const GetInTouch = () => {
         stuff, anything is cool. So feel free to message me on any of my social
         media or shoot me an{' '}
         <Link
-          href="Nihaldm:Nihaldm65@gmail.com"
+          href="mailto:Nihaldm65@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
@@ -99,38 +99,40 @@ const GetInTouch = () => {
       </Text>
 
       ## Contact Me
-      <FormControl>
-        <FormLabel>Name</FormLabel>
-        <Input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Enter your name"
-        />
-      </FormControl>
-      <FormControl>
-        <FormLabel>Email</FormLabel>
-        <Input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-        />
-      </FormControl>
-      <FormControl>
-        <FormLabel>Message</FormLabel>
-        <Textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Enter your message"
-        />
-      </FormControl>
-      <Button colorScheme="teal" onClick={handleSubmit}>
-        Send Message
-      </Button>
+      <form onSubmit={handleSubmit}>
+        <FormControl>
+          <FormLabel>Name</FormLabel>
+          <Input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Enter your name"
+          />
+        </FormControl>
+        <FormControl>
+          <FormLabel>Email</FormLabel>
+          <Input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+          />
+        </FormControl>
+        <FormControl>
+          <FormLabel>Message</FormLabel>
+          <Textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Enter your message"
+          />
+        </FormControl>
+        <Button colorScheme="teal" type="submit">
+          Send Message
+        </Button>
+      </form>
 
       <Box
-        spacing={0.5}
+       
         textAlign="center"
         fontFamily="monospace"
         paddingTop={{ base: 10, lg: 20, xl: 20 }}

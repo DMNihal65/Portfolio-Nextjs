@@ -13,16 +13,15 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import {
-  SiDotNet,
+ 
   SiJavascript,
-  SiTypescript,
-  SiGraphql,
+  
   SiReact,
-  SiNextDotJs,
-  SiNodeDotJs,
+  SiNextdotjs,
+  
   SiDocker,
   SiPython,
-  SiVueDotJs,
+  SiVuedotjs,
   SiPostgresql,
   SiMongodb
 } from 'react-icons/si'
@@ -105,7 +104,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         </List>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiVueDotJs} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiVuedotjs} color={emphasis} fontSize="2em" />
             Vue Js
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
@@ -113,7 +112,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             React
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNextDotJs} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiNextdotjs} color={emphasis} fontSize="2em" />
             NextJS
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">

@@ -34,8 +34,7 @@ const colors = {
 }
 
 const styles = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  global: (props: any) => ({
+  global: (props: ThemeComponentProps<ChakraTheme>) => ({
     body: {
       color: mode('gray.800', 'whiteAlpha.900')(props),
       bg: mode('gray.100', '#121212')(props),
@@ -62,14 +61,13 @@ const theme = extendTheme({
   config,
   fonts: {
     body: 'Poppins',
-    // heading: "'Roboto', sans-serif",
     heading: "'Space Grotesk', sans-serif"
   },
   colors,
   styles,
   components: {
     Link: {
-      baseStyle: (props) => ({
+      baseStyle: (props: ThemeComponentProps<ChakraTheme>) => ({
         color: mode('teal.500', 'cyan.200')(props),
       }),
       variants: {
@@ -91,10 +89,10 @@ const theme = extendTheme({
     },
     Button: {
       variants: {
-        outline: (props) => ({
+        outline: (props: ThemeComponentProps<ChakraTheme>) => ({
           borderColor: mode('black.400', 'cyan.200')(props),
         }),
-        outlineAlternative: (props) => ({
+        outlineAlternative: (props: ThemeComponentProps<ChakraTheme>) => ({
           borderWidth: '1px',
           borderRadius: 0,
           borderColor: mode('#595959', 'whiteAlpha.500')(props),
@@ -109,14 +107,14 @@ const theme = extendTheme({
     },
     Icon: {
       variants: {
-        accent: (props) => ({
+        accent: (props: ThemeComponentProps<ChakraTheme>) => ({
           borderColor: mode('gray.800', 'gray.400')(props),
         }),
       },
     },
     Divider: {
       variants: {
-        solid: (props) => ({
+        solid: (props: ThemeComponentProps<ChakraTheme>) => ({
           borderColor: mode('gray.800', 'gray.400')(props),
           marginLeft: 'auto',
           marginRight: 'auto',
@@ -125,4 +123,5 @@ const theme = extendTheme({
     },
   },
 })
+
 export default theme

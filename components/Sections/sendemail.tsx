@@ -1,17 +1,13 @@
-import { sendMail } from '@sendgrid/mail';
+// components/EmptyComponent.tsx
 
-export async function handler(event) {
-  const { name, email, message } = JSON.parse(event.body);
+import React from 'react';
 
-  sendMail({
-    to: 'your-email-address@example.com',
-    from: 'your-email-address@example.com',
-    subject: 'New Message from GetInTouch Form',
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-  });
+const EmptyComponent: React.FC = () => {
+  return (
+    <div>
+      {/* Your content goes here */}
+    </div>
+  );
+};
 
-  return {
-    statusCode: 200,
-    body: 'Email sent successfully!',
-  };
-}
+export default EmptyComponent;
