@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
 import { Heading, Text, Stack, Link, Icon, Box, FormControl, FormLabel, Input, Textarea, Button } from '@chakra-ui/react';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri';
 
@@ -31,7 +31,7 @@ const GetInTouch = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
     const formData = { name, email, message };
