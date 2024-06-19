@@ -20,6 +20,7 @@ import {
   scaleUp,
 } from 'config/animations'
 import { SocialMedias } from 'config/sidebar'
+
 const Sidebar = () => {
   const { colorMode } = useColorMode()
   const display = useBreakpointValue({ base: 'none', lg: 'block' })
@@ -118,6 +119,9 @@ const Sidebar = () => {
             <br />I'm a Full Stack Developer with a flair for AI and a passion for entrepreneurship. My portfolio showcases the blend of creativity and technology I bring to the table. Let's connect and explore the limitless possibilities of the digital world!
           </MotionText>
           <MotionButton
+            as="a"
+            href="https://drive.google.com/file/d/14xGBWOMezbmqesxyozfxhxsIsq5yVTzE/view?usp=sharing"
+            target="_blank"
             size="lg"
             variant="outline"
             borderWidth="1px"
@@ -126,9 +130,6 @@ const Sidebar = () => {
             fontSize="sm"
             width="140px"
             variants={simpleOpacity}
-            as={'a'}
-            href="mailto:marcjhon18@gmail.com"
-            target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

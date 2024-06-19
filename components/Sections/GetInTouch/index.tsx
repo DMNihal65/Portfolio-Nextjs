@@ -1,10 +1,10 @@
-import { memo, useState } from 'react'
-import { Heading, Text, Stack, Link, Icon, Box, FormControl, FormLabel, Input, Textarea, Button } from '@chakra-ui/react'
-import { motion, Variants } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri'
+import { memo, useState } from 'react';
+import { Heading, Text, Stack, Link, Icon, Box, FormControl, FormLabel, Input, Textarea, Button } from '@chakra-ui/react';
+import { motion, Variants } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri';
 
-const rimuruVariant: Variants = {
+const rimuruVariant = {
   shake: {
     rotate: [0, 15, 0, -15, 0],
     transition: {
@@ -23,21 +23,21 @@ const rimuruVariant: Variants = {
       ease: 'easeInOut',
     },
   },
-}
+};
 
 const GetInTouch = () => {
-  const [ref, inView] = useInView()
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [ref, inView] = useInView();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   
     const formData = { name, email, message };
   
     try {
-      const response = await fetch('/.netlify/functions/send-email', {
+      const response = await fetch('/api/email-sender', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: { 'Content-Type': 'application/json' },
@@ -45,18 +45,18 @@ const GetInTouch = () => {
   
       if (response.ok) {
         console.log('Email sent successfully!');
-        // Reset form fields
         setName('');
         setEmail('');
         setMessage('');
       } else {
-        console.error('Error sending email:', response.status);
+        const errorData = await response.json();
+        console.error('Error sending email:', errorData);
       }
     } catch (error) {
       console.error('Error sending email:', error);
     }
   };
-
+  
   return (
     <Stack
       width={{ base: '99%', lg: '60%', xl: '75%' }}
@@ -66,9 +66,7 @@ const GetInTouch = () => {
     >
       <Heading
         size="2xl"
-        style={{
-          fontVariantCaps: 'small-caps',
-        }}
+        style={{ fontVariantCaps: 'small-caps' }}
       >
         Say hi!{' '}
         <Text as="span" fontSize="2xl" variant="emphasis">
@@ -88,17 +86,12 @@ const GetInTouch = () => {
         as my human interaction battery lasts. Coding, work, movies or even weeb
         stuff, anything is cool. So feel free to message me on any of my social
         media or shoot me an{' '}
-        <Link
-          href="mailto:Nihaldm65@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link href="mailto:Nihaldm65@gmail.com" target="_blank" rel="noreferrer">
           email
         </Link>
         .
       </Text>
 
-      ## Contact Me
       <form onSubmit={handleSubmit}>
         <FormControl>
           <FormLabel>Name</FormLabel>
@@ -126,13 +119,12 @@ const GetInTouch = () => {
             placeholder="Enter your message"
           />
         </FormControl>
-        <Button colorScheme="teal" type="submit">
+        <Button colorScheme="teal" type="submit" >
           Send Message
         </Button>
       </form>
 
       <Box
-       
         textAlign="center"
         fontFamily="monospace"
         paddingTop={{ base: 10, lg: 20, xl: 20 }}
@@ -155,7 +147,7 @@ const GetInTouch = () => {
         </Link>
       </Box>
     </Stack>
-  )
+  );
 }
 
-export default memo(GetInTouch)
+export default memo(GetInTouch);
