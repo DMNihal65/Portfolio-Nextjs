@@ -4,7 +4,7 @@ import {
   ChakraTheme,
   ThemeComponentProps,
 } from '@chakra-ui/react'
-import { mode } from '@chakra-ui/theme-tools'
+import { mode, GlobalStyleProps } from '@chakra-ui/theme-tools'
 
 interface IThemeMode {
   Light: ColorMode
@@ -34,7 +34,7 @@ const colors = {
 }
 
 const styles = {
-  global: (props: ThemeComponentProps<ChakraTheme>) => ({
+  global: (props: GlobalStyleProps) => ({
     body: {
       color: mode('gray.800', 'whiteAlpha.900')(props),
       bg: mode('gray.100', '#121212')(props),

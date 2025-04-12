@@ -17,13 +17,14 @@ import {
   SiJavascript,
   
   SiReact,
-  SiNextdotjs,
   
   SiDocker,
   SiPython,
-  SiVuedotjs,
+  
   SiPostgresql,
-  SiMongodb
+  SiMongodb,
+  SiVueDotJs,
+  SiNextDotJs
 } from 'react-icons/si'
 import { GiCoffeePot } from 'react-icons/gi'
 import { IoMdOpen } from 'react-icons/io'
@@ -104,7 +105,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         </List>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiVuedotjs} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiVueDotJs} color={emphasis} fontSize="2em" />
             Vue Js
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
@@ -112,7 +113,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             React
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNextdotjs} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiNextDotJs} color={emphasis} fontSize="2em" />
             NextJS
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">

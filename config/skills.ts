@@ -3,15 +3,15 @@ import {
 
   SiJavascript,
   SiTypescript,
-  SiNodedotjs,
+  SiNodeDotJs,
   SiGraphql,
  
   SiReact,
-  SiNextdotjs,
+  SiNextDotJs,
   SiRedux,
-  SiStyledcomponents,
+  SiStyledComponents,
  
-  SiVuedotjs,
+  SiVueDotJs,
   SiDocker,
   
   SiGitlab,
@@ -32,10 +32,9 @@ import {
   SiApachekafka,
   SiAmazonaws,
   SiPython,
-  
+  SiTailwindcss,
   
 } from 'react-icons/si'
-import { BiLogoTailwindCss } from "react-icons/bi";
 
 import { AiOutlineAntDesign } from 'react-icons/ai'
 import { FaSourcetree } from 'react-icons/fa'
@@ -63,7 +62,7 @@ export const Skills: {
     
     {
       name: 'Node',
-      icon: SiNodedotjs,
+      icon: SiNodeDotJs,
     },
     {
       name: 'Javascript (ES6+)',
@@ -87,7 +86,7 @@ export const Skills: {
     },
     // {
     //   name: 'NextJS',
-    //   icon: SiNextdotjs,
+    //   icon: SiNextDotJs,
     // },
     // {
     //   name: 'Redux',
@@ -95,7 +94,7 @@ export const Skills: {
     // },
     {
       name: 'VueJS',
-      icon: SiVuedotjs,
+      icon: SiVueDotJs,
     },
   ],
   database: [
@@ -140,7 +139,7 @@ export const Skills: {
   'ui frameworks': [
     {
       name: 'Styled Components',
-      icon: SiStyledcomponents,
+      icon: SiStyledComponents,
     },
     {
       name: 'AntDesign',
@@ -156,7 +155,7 @@ export const Skills: {
     },
     {
       name: 'Tailwind Css',
-      icon: BiLogoTailwindCss,
+      icon: SiTailwindcss,
     },
   ],
   'productivity boost': [

@@ -29,6 +29,7 @@ export type FeaturedCardProps = {
   isMobile?: boolean
   videoSrc?: string
   fallbackSrc?: string
+  height: any
 }
 
 const variants = {
@@ -230,6 +231,7 @@ const FeaturedCardComponent = (
     ctaUrl,
     videoSrc,
     fallbackSrc,
+    height,
   }: FeaturedCardProps
 ) => {
   const bg = useColorModeValue('gray.100', 'gray.700')
@@ -247,6 +249,7 @@ const FeaturedCardComponent = (
       whileTap="tap"
       variants={variants}
       boxShadow="lg"
+      height={height}
       minHeight={{ base: '300px', sm: '350px', md: '400px' }}
       _hover={{
         '.media-bg video, .media-bg img': {
