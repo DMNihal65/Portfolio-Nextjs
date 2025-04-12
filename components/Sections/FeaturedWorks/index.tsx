@@ -18,9 +18,9 @@ const FeaturedWorksSection = () => {
   const isMobile = useBreakpointValue(mobileBreakpointsMap)
   return (
     <Stack
-      width={{ base: '99%', lg: '60%', xl: '75%' }}
+      width={{ base: '99%', lg: '80%', xl: '70%' }}
       height="100%"
-      spacing={{ base: 6, xl: 8 }}
+      spacing={{ base: 8, md: 10, xl: 12 }}
     >
       <Heading
         size="2xl"
@@ -37,47 +37,52 @@ const FeaturedWorksSection = () => {
 
       <MotionGrid
         templateRows="repeat(1, 1fr)"
-        templateColumns="repeat(6, 1fr)"
-        gap={{ base: 5, md: 6 }}
+        templateColumns="repeat(1, 1fr)"
+        gap={{ base: 8, md: 10, xl: 12 }}
         variants={galleryStagger}
       >
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+        <MotionGridItem colSpan={1} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={1}
-            title="Fintech Bank App!"
-            src="/works/tobira/bankapp.png"
-            description="Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users, and manages their finances altogether."
-            height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://banking-jet.vercel.app/sign-in"
-            objectPosition="right 20%"
+            title="AI MOCK INTERVIEW"
+            src="/AiInterview.PNG"
+            description="An AI-powered web application to help job seekers prepare for interviews through tailored simulations. Features include AI-generated questions, real-time feedback, personalized improvement suggestions, audio recording, and AI-driven response analysis. Built with Next.js, Drizzle ORM, Gemini AI, PostgreSQL, TailwindCSS, shadcn, and Vercel."
+            height={{ base: '200px', md: '250px', '2xl': '300px' }}
+            ctaUrl="https://ai-interview-umber.vercel.app/"
+            objectPosition="center center"
             isMobile={isMobile}
           />
         </MotionGridItem>
 
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
-          <FeaturedCard
-            idx={2}
-            title="SAAS Automation Builder"
-            description="The SAAS Automation Builder is an innovative platform designed to streamline the creation and management of SaaS applications. Leveraging cutting-edge technologies such as Clerk for seamless authentication, Neon Tech for advanced database solutions, and Uploadcare for efficient file management, it ensures a robust and scalable infrastructure."
-            src="/works/saas1.png"
-            height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://github.com/webprodigies/fuzzie-production"
-            isMobile={isMobile}
-          />
-        </MotionGridItem>
-
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+        <MotionGridItem colSpan={1} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={3}
-            title="Notion Clone"
-            description="The SaaS Notion Clone is a sophisticated application that replicates the functionality of Notion with enhanced features. Built with Next.js 13 for a modern front-end experience, it includes real-time cursors for collaborative editing."
-            src="/works/saas2.png"
-            height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://github.com/webprodigies/webprodigies-cypress/tree/main"
-            objectPosition="right 20%"
+            title="GSAP Animations"
+            description="A collection of various animations including scroll trigger animations, preloaders, and more. Built using HTML, CSS, JavaScript, React, Framer Motion, and GSAP. Features stunning 3D parallax effects and smooth scroll implementations."
+            src="/Arc.PNG"
+            videoSrc="/Scroll Trigger 3D Fun - Brave 2025-04-06 22-51-18.mp4"
+            fallbackSrc="/Arc.PNG"
+            height={{ base: '200px', md: '250px', '2xl': '300px' }}
+            ctaUrl="https://dmnihal65.github.io/ScrollTrigger3D/"
+            objectPosition="center center"
             isMobile={isMobile}
           />
         </MotionGridItem>
+
+        <MotionGridItem colSpan={1} variants={fadeInUpSlower}>
+          <FeaturedCard
+            idx={2}
+            title="CODESNIPPET MASTER"
+            description="A SaaS platform for efficient code snippet management to boost developer productivity. Features AI-powered code generation, optimization, auto-documentation, advanced search, filtering, user authentication, subscription management, and social features. Built with Next.js, Drizzle ORM, Gemini AI, PostgreSQL, TailwindCSS, shadcn, and Vercel."
+            src="/CodeSnipz.PNG"
+            height={{ base: '200px', md: '250px', '2xl': '300px' }}
+            ctaUrl="https://code-snipz-plum.vercel.app/dashboard"
+            objectPosition="center center"
+            isMobile={isMobile}
+          />
+        </MotionGridItem>
+
+        
 
         {/* <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard

@@ -31,6 +31,7 @@ import {
   SiFirebase,
   SiApachekafka,
   SiAmazonaws,
+  SiPython,
   
   
 } from 'react-icons/si'
@@ -69,13 +70,14 @@ export const Skills: {
       icon: SiJavascript,
     },
     {
-      name: 'Typescript',
-      icon: SiTypescript,
+      name: 'FastAPI (Python)',
+      icon: SiPython,
     },
-    {
-      name: 'Graphql (JS)',
-      icon: SiGraphql,
-    },
+    // {
+    //   name: 'Typescript',
+    //   icon: SiTypescript,
+    // },
+    
     
   ],
   frontend: [
@@ -83,14 +85,14 @@ export const Skills: {
       name: 'React',
       icon: SiReact,
     },
-    {
-      name: 'NextJS',
-      icon: SiNextdotjs,
-    },
-    {
-      name: 'Redux',
-      icon: SiRedux,
-    },
+    // {
+    //   name: 'NextJS',
+    //   icon: SiNextdotjs,
+    // },
+    // {
+    //   name: 'Redux',
+    //   icon: SiRedux,
+    // },
     {
       name: 'VueJS',
       icon: SiVuedotjs,

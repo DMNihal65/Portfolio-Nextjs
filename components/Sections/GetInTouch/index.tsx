@@ -126,7 +126,7 @@ const GetInTouch = () => {
             placeholder="Enter your message"
           />
         </FormControl>
-        <Button colorScheme="teal" type="submit">
+        <Button colorScheme="teal" type="submit" className='mt-2'>
           Send Message
         </Button>
       </form>

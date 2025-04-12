@@ -23,31 +23,28 @@ export const Experiences: {
     name: 'Central Manufacturing Technology Institute',
     longName: 'Central Manufacturing Technology Institute',
     url: '',
-    position: 'Full Stack Developer',
+    position: 'Project Associate I - Software Developer',
     duration: 'March 2024 - Present',
     logo: {
       light: '/worked_at_logos/cmti.png',
       dark: '/worked_at_logos/cmti.png',
     },
     roles: [
-        <>
-        Led a team of 4 members in the Toyota Machine Maintenance project, utilizing Vue.js for the frontend and FastAPI
-        for the backend.
-        </>,
-        <>
-           Implemented PostgreSQL and TimescaleDB for data storage and retrieval.
-        </>,
-     
-        <>
-         Integrated MongoDB and MTLINKI for real-time data processing and visualization.
-        </>,
-       
-        <>
-          Designed and developed a user-friendly dashboard for the maintenance section of the Toyota engine manufacturing
-        factory, providing real-time data dashboards and analytics.
-        </>
-      
-      
+      <>
+        Led cross-functional teams of 5-6 developers delivering tailored software solutions for manufacturing clients.
+      </>,
+      <>
+        Collaborated with lead Scientists on Industry 4.0 research initiatives, developing multiple sponsored projects across
+        smart manufacturing domains.
+      </>,
+      <>
+        Spearheaded an IoT-integrated MES implementation that increased production efficiency by 18% for a leading
+        Indian manufacturer.
+      </>,
+      <>
+        Architected AWS-based document and inventory management systems, reducing operational costs and minimizing
+        production downtime.
+      </>
     ],
   },
   CMTI2: {
@@ -84,7 +81,7 @@ export const Experiences: {
     },
     roles: [
       <>
-        Web Development Intern at Comp-Soft Technology, contributing to a meaningful project supporting an NGO’s
+        Web Development Intern at Comp-Soft Technology, contributing to a meaningful project supporting an NGO's
         green initiative. </>,
         <>
         Responsible for developing a website connecting plant and nature enthusiasts, enabling them to

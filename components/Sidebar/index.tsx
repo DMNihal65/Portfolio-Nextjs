@@ -127,8 +127,9 @@ const Sidebar = () => {
             width="140px"
             variants={simpleOpacity}
             as={'a'}
-            href="mailto:marcjhon18@gmail.com"
+            href="https://drive.google.com/file/d/1XuA42tVDKhh05CzaBwTYD9ifCPPGPEQ9"
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
