@@ -1,8 +1,9 @@
 import { memo, useState } from 'react'
-import { Heading, Text, Stack, Link, Icon, Box, FormControl, FormLabel, Input, Textarea, Button } from '@chakra-ui/react'
+import { Heading, Text, Stack, Link, Icon, Box, FormControl, FormLabel, Input, Textarea, Button, Divider, Flex } from '@chakra-ui/react'
 import { motion, Variants } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri'
+import VisitorCounter from 'components/Misc/VisitorCounter'
 
 const rimuruVariant: Variants = {
   shake: {
@@ -132,27 +133,39 @@ const GetInTouch = () => {
       </form>
 
       <Box
-       
         textAlign="center"
         fontFamily="monospace"
         paddingTop={{ base: 10, lg: 20, xl: 20 }}
         paddingBottom={{ base: 5, lg: 18 }}
       >
-        <Link
-          variant="description"
-          textDecoration="none"
-          rel="noreferrer"
-          href="https://github.com/DMNihal65"
-          target="_blank"
-          _focus={{ boxShadow: 'none' }}
-        >
-          <Text as="span">
-            <Icon as={RiGithubFill} h={6} w={6} /> <br />
-            Designed and Made with <Icon as={RiHeartPulseFill} /> <br />
-            DM Nihal <Icon as={RiCopyleftLine} /> 2024<br />
+        <Divider my={8} />
+        
+        <Flex direction="column" align="center" justify="center" gap={3}>
+          <Link
+            variant="description"
+            textDecoration="none"
+            rel="noreferrer"
+            href="https://github.com/DMNihal65"
+            target="_blank"
+            _focus={{ boxShadow: 'none' }}
+            display="block"
+          >
+            <Icon as={RiGithubFill} h={7} w={7} />
+          </Link>
+          
+          <Text as="div" fontSize="sm" color="gray.500">
+            Designed and Made with <Icon as={RiHeartPulseFill} color="red.400" /> by<br />
+            DM Nihal <Icon as={RiCopyleftLine} /> {new Date().getFullYear()}<br />
+          </Text>
+          
+          <Text as="div" fontSize="xs" color="gray.400" mt={1}>
             <>Inspired from KL Lawingco</>
           </Text>
-        </Link>
+          
+          <Box mt={3}>
+            <VisitorCounter />
+          </Box>
+        </Flex>
       </Box>
     </Stack>
   )
