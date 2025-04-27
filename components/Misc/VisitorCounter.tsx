@@ -12,11 +12,12 @@ const VisitorCounter = () => {
 
   useEffect(() => {
     // Increment count when component mounts (user visits the page)
-    fetch('/api/visitor-count', { method: 'POST' });
+    fetch('/api/visitor-count', { method: 'POST' })
+      .catch(err => console.error('Error incrementing visitor count:', err));
   }, []);
 
   useEffect(() => {
-    if (data && data.count) {
+    if (data && typeof data.count === 'number') {
       // Animate the counter from 0 to actual value
       const finalCount = data.count;
       const duration = 2000; // 2 seconds

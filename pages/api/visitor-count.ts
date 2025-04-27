@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 // Initialize Redis client
 const redis = new Redis({
-  url: "https://powerful-kid-29480.upstash.io" ,
+  url: "https://powerful-kid-29480.upstash.io",
   token: "AXMoAAIjcDFkY2UzYjEzMzQ5NzU0NWU0ODk1ZDYwOTAwNTg5YWU0YnAxMA",
 });
 
@@ -20,7 +20,7 @@ export default async function handler(
       return res.status(200).json({ success: true });
     } else if (req.method === 'GET') {
       // Get the current count
-      const count = await redis.get<number>(VISITOR_KEY) || 0;
+      const count = await redis.get(VISITOR_KEY) || 0;
       return res.status(200).json({ count });
     }
 
