@@ -17,7 +17,7 @@ import Experience from 'components/Sections/Experience'
 import FeaturedWorks from 'components/Sections/FeaturedWorks'
 import ScrollMore from 'components/Misc/ScrollMore'
 import { Article } from 'types/article'
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 
 // These are on bottom sections so no need to render it instantly
 const DevToArticles = dynamic(() => import('components/Sections/DevToArticles'))
@@ -143,13 +143,13 @@ const Portfolio = ({ articles }: { articles: Article[] }): JSX.Element => {
                 flexDirection={'row'}
               >
                 <GetInTouch />
-                <Analytics />
               </Box>
             </FadeInLayout>
           </Stack>
         </GridItem>
       </Grid>
       <ScrollMore />
+      <Analytics />
     </>
   )
 }
